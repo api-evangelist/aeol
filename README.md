@@ -64,5 +64,44 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aeol is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aeol
+AEOL (AEOL KOREA Co., Ltd. / 주식회사 에이올코리아) is a South Korean advanced-materials and
+climate-technology manufacturer founded in February 2018 out of the Korea University Campus Town
+programme and headquartered in Seongnam, Gyeonggi Province. It holds a twenty-year exclusive licence
+from the Korea Research Institute of Chemical Technology to manufacture and sell Metal-Organic
+Framework (MOF) materials and was the first Korean company to commercialise MOF production at scale,
+which it turns into physical equipment: MOF desiccant rotors and hybrid dehumidifiers that
+regenerate at low temperature instead of using refrigerant compression, all-in-one heat-recovery
+ventilation units with UV-LED and HEPA air purification, the Red Dot-awarded Mofresh Mini gas and
+odour adsorber, and the CarbonSorV rotary CO2-capture wheel shown at CES 2025. It won a CES 2024
+Innovation Award and the FIX 2024 Grand Innovation Award.
+
+## No API surface
+
+AEOL sells hardware and materials, not software. It publishes no developer portal, no API
+documentation, no SDK, no webhook surface and no machine-readable API contract of any kind.
+
+`aeolkorea.co.kr` is a Cafe24-hosted Korean-language brochure site sitting behind a "CUPID" AES
+JavaScript cookie interstitial that answers HTTP 200 with an identical ~780-byte challenge shell for
+**every** path — including a negative-control path that cannot exist. A 200 from that host is not
+evidence a document exists, and the shell echoes the requested URL back into its own body, so
+keyword matches against it are matches against the request. Every well-known, OpenAPI, GraphQL,
+agent-card and apis.json probe on that origin is recorded as a miss for exactly that reason.
+
+`aeolkorea.com` is a **different company** — AEOL Electronics Korea, a heatpipe, vapor-chamber and
+thermal-module supplier — and nothing on that domain belongs to this profile. `aeol.kr` does not
+resolve.
+
+## What is in this repository
+
+- `apis.yml` — company identity, links, and the `x-coverage` record of why this profile is thin
+- `well-known/aeol-well-known.yml` — the `/.well-known/` probe: zero hits, catch-all origin, negative control failed
+- `security/aeol-domain-security.yml` — TLS/DNS posture (TLS 1.2, no HSTS, no DNSSEC, no CAA, no DMARC)
+- `packages/aeol-packages.yml` — registry sweep: no first-party package on npm, PyPI, RubyGems, crates.io, Packagist or NuGet, and no GitHub organization
+- `conformance/aeol-conformance.yml` — API standards recorded as not-applicable; the CES/Red Dot awards and the KRICT MOF licence recorded as the real third-party assessments
+- `llms/aeol-llms.txt` — an agent-facing summary of the above
+
+## Links
+
+- Website: https://www.aeolkorea.co.kr/
+- Crunchbase: https://www.crunchbase.com/organization/aeol
+- Secondary market: https://equityzen.com/company/aeol/

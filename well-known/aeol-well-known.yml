@@ -1,0 +1,49 @@
+generated: '2026-09-10'
+method: probed
+source: https://www.aeolkorea.co.kr/
+note: >-
+  ZERO HITS. Every path below returned HTTP 200 with an identical ~780-byte HTML body — a Cafe24
+  "CUPID" AES JavaScript cookie interstitial that sets a cookie in script and redirects to
+  ?ckattempt=1. The negative control (/.well-known/aeol-negative-control-7f3ab91c.json, a path that
+  cannot exist) returned the same 200 shell on both hosts, so this origin is a catch-all and NOT ONE
+  of these 200s is a served document. No WellKnown and no SecurityTxt pointer is emitted from this
+  probe. aeolkorea.com is a DIFFERENT company (AEOL Electronics Korea, heatpipe/vapor-chamber thermal
+  modules) and was deliberately excluded from the host set; aeol.kr has no DNS A record.
+hit_count: 0
+path_echo_control: failed
+soft_404_control:
+  path: /.well-known/aeol-negative-control-7f3ab91c.json
+  status: 200
+  bytes: 810
+  body: cupid.js AES cookie challenge HTML shell (identical to every other path)
+hosts:
+- host: https://aeolkorea.co.kr
+  documents:
+  - {path: /.well-known/security.txt, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/openid-configuration, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/oauth-authorization-server, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/oauth-protected-resource, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/api-catalog, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/ai-plugin.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/ucp.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/acp.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/aauth-resource.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/apis.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /apis.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /apis.yml, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/agent-card.json, status: 200, file: null, note: catch-all HTML shell, not an agent card}
+  - {path: /.well-known/agent.json, status: 200, file: null, note: catch-all HTML shell, not an agent card}
+- host: https://www.aeolkorea.co.kr
+  documents:
+  - {path: /.well-known/security.txt, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/openid-configuration, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/oauth-authorization-server, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/oauth-protected-resource, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/api-catalog, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/ai-plugin.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/ucp.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/acp.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/aauth-resource.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /.well-known/apis.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /apis.json, status: 200, file: null, note: catch-all HTML shell, not a document}
+  - {path: /apis.yml, status: 200, file: null, note: catch-all HTML shell, not a document}

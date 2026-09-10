@@ -1,0 +1,51 @@
+generated: '2026-09-10'
+method: searched
+source: registry searches of npm, PyPI, RubyGems, crates.io, Packagist, NuGet and GitHub (2026-09-10)
+result: none
+notes: >-
+  AEOL publishes no client SDK, because it publishes no public API. It is an advanced-materials and
+  HVAC/air-treatment equipment manufacturer, not a software vendor. Every registry query below
+  returned either zero results or unrelated fuzzy matches on the strings "aeol" / "aeolus" /
+  "aeolin". No `SDKs` pointer is wired in apis.yml and the sdk_count checks are correctly left
+  unearned. Every entry records `version: null` because no package exists to read a version from.
+packages: []
+registries_checked:
+- registry: npm
+  query: aeol, aeolkorea, @aeol scope
+  version: null
+  published: null
+  result: 0 packages; the @aeol scope does not exist (404 on registry.npmjs.org/@aeol%2fsdk)
+- registry: pypi
+  query: aeol, aeolkorea, aeol-korea
+  version: null
+  published: null
+  result: 404 - no project under any spelling
+- registry: rubygems
+  query: aeol
+  version: null
+  published: null
+  result: 1 unrelated match (aeolus-image, from the retired Red Hat Aeolus cloud project)
+- registry: crates.io
+  query: aeol
+  version: null
+  published: null
+  result: 3 unrelated fuzzy matches (kobold-archaeology, git-archaeology, archaeologist)
+- registry: packagist
+  query: aeol
+  version: null
+  published: null
+  result: >-
+    1,146 unrelated fuzzy hits on "aeol"/"aeon"/"aeolus" (liorphp/aeoluscms, aeolun/*, aeon-php/*);
+    none published by AEOL KOREA
+- registry: nuget
+  query: aeol
+  version: null
+  published: null
+  result: 36 unrelated hits, all from the Aeolin.* namespace of an unrelated author
+- registry: github
+  query: orgs/aeol, orgs/aeolkorea, orgs/aeol-korea
+  version: null
+  published: null
+  result: >-
+    all three 404 - AEOL KOREA operates no GitHub organization. A search for "aeol type:org" returns
+    62 unrelated orgs (aeolusbot, aeolus-cloud, aeolusproject, AeolusAero, aeolabs and similar).

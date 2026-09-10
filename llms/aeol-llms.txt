@@ -1,0 +1,37 @@
+# AEOL (AEOL KOREA Co., Ltd. / 주식회사 에이올코리아)
+
+> AEOL is a South Korean advanced-materials and climate-technology manufacturer founded in February 2018 out of the Korea University Campus Town programme and headquartered in Seongnam, Gyeonggi Province. It holds a twenty-year exclusive licence from the Korea Research Institute of Chemical Technology (KRICT) to manufacture and sell Metal-Organic Framework (MOF) materials, and was the first Korean company to commercialise MOF production at scale.
+
+AEOL sells hardware and materials, not software. As of 2026-09-10 it publishes **no public API, no developer portal, no API documentation, no SDK, no webhook surface and no machine-readable API contract of any kind**. Do not assume or invent an `api.aeolkorea.co.kr`, `docs.aeolkorea.co.kr` or `developer.aeolkorea.co.kr` endpoint — none of those hosts resolve.
+
+Note for crawlers and agents: `aeolkorea.co.kr` is hosted on Cafe24 behind a "CUPID" AES JavaScript cookie interstitial. It answers HTTP 200 with an identical ~780-byte challenge shell for **every** path, including paths that cannot exist, and it echoes the requested URL back into that shell. A 200 from this host is not evidence that a document exists, and keyword matches against its body are matches against your own request URL. Read the body, never the status code.
+
+Do not confuse AEOL with `aeolkorea.com` — that is **AEOL Electronics Korea**, a different Korean company selling heatpipes, vapor chambers, heatsinks, thermal modules and fans. It is not this company and nothing on that domain belongs to this profile. `aeol.kr` has no DNS A record.
+
+## Products and technology
+
+- MOF desiccant rotors and hybrid dehumidifiers that regenerate at low temperature instead of using refrigerant compression
+- All-in-one units combining heat-recovery ventilation with UV-LED and HEPA air purification and auxiliary cooling
+- Mofresh Mini — granule-type MOF dehumidifier that also adsorbs harmful gases and odours (Red Dot Design Award)
+- CarbonSorV — rotary wheel for continuous CO2 adsorption/desorption, shown at CES 2025
+- Awards: CES 2024 Innovation Award; FIX 2024 Grand Innovation Award
+
+## Company
+
+- [AEOL KOREA](https://www.aeolkorea.co.kr/): company website (Korean; behind a JavaScript cookie interstitial)
+- [Crunchbase: AEOL](https://www.crunchbase.com/organization/aeol): funding and company profile
+- [Dealroom: AEOL](https://dealroom.co/companies/aeol/): venture-backed company profile
+- [EquityZen: AEOL](https://equityzen.com/company/aeol/): secondary-market pre-IPO listing
+- [THE VC: 에이올코리아](https://thevc.kr/aeolkorea): Korean funding and company data
+- [Red Dot: Mofresh Mini](https://www.red-dot.org/project/mofresh-mini-58014): product design award entry
+
+## Funding
+
+Founded 2018. Roughly USD 10–23 million raised across reported rounds. Investors include KU Startup, BlissVine Ventures, JCGI, KNET Investment Partners and NH Venture Investment. Shares trade on the EquityZen secondary marketplace.
+
+## Artifacts in this profile
+
+- `well-known/aeol-well-known.yml`: the `/.well-known/` probe — zero hits, catch-all origin, negative control failed
+- `security/aeol-domain-security.yml`: TLS/DNS posture probe (TLS 1.2, no HSTS, no DNSSEC, no CAA, no DMARC)
+- `packages/aeol-packages.yml`: registry sweep — no first-party package on npm, PyPI, RubyGems, crates.io, Packagist or NuGet, and no GitHub organization
+- `conformance/aeol-conformance.yml`: API standards recorded as not-applicable; awards and the KRICT MOF licence recorded as the real third-party assessments

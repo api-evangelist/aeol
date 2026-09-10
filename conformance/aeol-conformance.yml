@@ -1,0 +1,102 @@
+generated: '2026-09-10'
+method: probed
+source: >-
+  live probes of aeolkorea.co.kr / www.aeolkorea.co.kr (2026-09-10) plus AEOL KOREA public
+  statements and Korean trade-press coverage
+scope: >-
+  AEOL publishes no API, so there are no API or cross-cutting technical standards to assert. The
+  api_standards block below is recorded as applicable:false rather than a bare conforms:false, so
+  this file is never mistaken for a failed compliance posture. What AEOL is actually measured
+  against is materials and appliance certification, recorded as the applicable regime with an
+  honest status. A caveat governs every negative on this page: the origin is a catch-all, so the
+  probes below could not read a body - see catch_all_caveat.
+catch_all_caveat: >-
+  aeolkorea.co.kr sits behind a Cafe24 "CUPID" AES JavaScript cookie interstitial that answers HTTP
+  200 with an identical ~780-byte challenge shell for EVERY path, including a negative control that
+  cannot exist. Status codes on that host carry no information; the shell body is the evidence. No
+  conformance is asserted from a status code here, and no 200 on that host is treated as a hit.
+api_standards:
+- id: openapi
+  conforms: false
+  applicable: false
+  evidence: >-
+    /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs and /redoc all
+    return the CUPID challenge shell, not a spec; no api./docs./developer. subdomain resolves
+- id: graphql
+  conforms: false
+  applicable: false
+  evidence: /graphql returns the challenge shell; no GraphQL surface is documented anywhere
+- id: asyncapi
+  conforms: false
+  applicable: false
+- id: mcp
+  conforms: false
+  applicable: false
+  evidence: no hosted MCP endpoint and no stdio package published
+- id: a2a
+  conforms: false
+  applicable: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json both return the catch-all HTML shell on
+    aeolkorea.co.kr and www.aeolkorea.co.kr - rejected as HTML, no card recorded
+- id: oauth2
+  conforms: false
+  applicable: false
+- id: openid-connect
+  conforms: false
+  applicable: false
+  evidence: /.well-known/openid-configuration returns the challenge shell, not OIDC metadata
+- id: rfc9457-problem-details
+  conforms: false
+  applicable: false
+- id: rfc9116-security-txt
+  conforms: false
+  applicable: true
+  evidence: >-
+    /.well-known/security.txt returns the challenge shell on both hosts; no RFC 9116 document is
+    served
+- id: apis-json
+  conforms: false
+  applicable: true
+  evidence: /apis.json, /apis.yml and /.well-known/apis.json all return the challenge shell
+regulatory_regime:
+- id: ces-innovation-award-2024
+  name: CES 2024 Innovation Award (Consumer Technology Association)
+  conforms: true
+  status: awarded
+  evidence: >-
+    AEOL KOREA received a CES 2024 Innovation Award and the FIX 2024 Grand Innovation Award for its
+    MOF-based dehumidification and air-treatment technology; it showed the CarbonSorV CO2-capture
+    wheel at CES 2025.
+  note: >-
+    An industry design/innovation award, not a conformance certification. Recorded because it is the
+    only third-party assessment AEOL publicly claims. It earns no `Compliance` pointer.
+- id: red-dot-design-award
+  name: Red Dot Design Award - Mofresh Mini
+  conforms: true
+  status: awarded
+  evidence: https://www.red-dot.org/project/mofresh-mini-58014
+- id: krict-mof-licence
+  name: >-
+    Korea Research Institute of Chemical Technology (KRICT) 20-year exclusive MOF manufacturing and
+    sales licence
+  conforms: true
+  status: licensed
+  evidence: >-
+    AEOL holds an exclusive twenty-year licence from KRICT to manufacture and sell products based on
+    the institute's Metal-Organic Framework technology - the basis of its claim to be the first
+    Korean company to commercialise MOF at scale.
+information_security_compliance:
+  found: false
+  note: >-
+    No trust center, SOC 2, ISO 27001, or equivalent information-security certification page was
+    found. probe-security-programs.py reported trust=none. Its vdp=written result was a FALSE
+    POSITIVE produced by the path-echoing challenge shell (the interstitial writes the requested URL
+    into the body, so /vulnerability-disclosure "matched" the keyword "vulnerability" from its own
+    request path); that artifact was deleted and no `Security`, `VulnerabilityDisclosure` or
+    `Compliance` pointer is wired.
+domain_security_observed:
+  source: security/aeol-domain-security.yml
+  summary: >-
+    www.aeolkorea.co.kr serves TLS 1.2 (not 1.3) with no HSTS; the certificate expires 2027-02-11.
+    The aeolkorea.co.kr domain has SPF but no DNSSEC, no CAA record and no DMARC record.
