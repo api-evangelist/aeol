@@ -1,4 +1,4 @@
-# Aeol
+# AEOL
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,44 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AEOL (AEOL KOREA Co., Ltd. / 주식회사 에이올코리아) is a South Korean advanced-materials and
-climate-technology manufacturer founded in February 2018 out of the Korea University Campus Town
-programme and headquartered in Seongnam, Gyeonggi Province. It holds a twenty-year exclusive licence
-from the Korea Research Institute of Chemical Technology to manufacture and sell Metal-Organic
-Framework (MOF) materials and was the first Korean company to commercialise MOF production at scale,
-which it turns into physical equipment: MOF desiccant rotors and hybrid dehumidifiers that
-regenerate at low temperature instead of using refrigerant compression, all-in-one heat-recovery
-ventilation units with UV-LED and HEPA air purification, the Red Dot-awarded Mofresh Mini gas and
-odour adsorber, and the CarbonSorV rotary CO2-capture wheel shown at CES 2025. It won a CES 2024
-Innovation Award and the FIX 2024 Grand Innovation Award.
+AEOL (AEOL KOREA Co., Ltd. / 주식회사 에이올코리아) is a South Korean advanced-materials and climate-technology manufacturer founded in February 2018 out of the Korea University Campus Town programme and headquartered in Seongnam, Gyeonggi Province. The company holds a twenty-year exclusive licence from the Korea Research Institute of Chemical Technology to manufacture and sell Metal-Organic Framework (MOF) materials, and was the first Korean firm to commercialise MOF production at scale. It turns that porous-adsorbent chemistry into physical equipment: MOF desiccant rotors and hybrid dehumidifiers that regenerate at low temperature instead of using refrigerant compression, all-in-one units combining heat-recovery ventilation with UV-LED and HEPA air purification and auxiliary cooling, harmful-gas and odour adsorption products such as the Red Dot-awarded Mofresh Mini, and the CarbonSorV rotary wheel for continuous CO2 capture shown at CES 2025. AEOL won a CES 2024 Innovation Award and the FIX 2024 Grand Innovation Award, has raised roughly USD 10-23 million from investors including KU Startup, BlissVine Ventures, JCGI, KNET Investment Partners and NH Venture Investment, and sells through appliance-maker R&D partnerships and distribution agreements in North America and New Zealand. AEOL sells hardware and materials, not software: it operates a single Korean-language Cafe24-hosted corporate site with no developer section, publishes no API documentation, SDK, webhook or machine-readable API contract of any kind, and maintains no public code repositories or package-registry releases.
 
-## No API surface
+**Areas:** Company · Advanced Materials · Metal-Organic Frameworks · Air Purification · Ventilation · Dehumidification · Carbon Capture · HVAC · Manufacturing · South Korea
 
-AEOL sells hardware and materials, not software. It publishes no developer portal, no API
-documentation, no SDK, no webhook surface and no machine-readable API contract of any kind.
+## AEOL on APIs.io
 
-`aeolkorea.co.kr` is a Cafe24-hosted Korean-language brochure site sitting behind a "CUPID" AES
-JavaScript cookie interstitial that answers HTTP 200 with an identical ~780-byte challenge shell for
-**every** path — including a negative-control path that cannot exist. A 200 from that host is not
-evidence a document exists, and the shell echoes the requested URL back into its own body, so
-keyword matches against it are matches against the request. Every well-known, OpenAPI, GraphQL,
-agent-card and apis.json probe on that origin is recorded as a miss for exactly that reason.
+Everything profiled for AEOL is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aeol/](https://apis.io/providers/aeol/)** — or go straight to one of the APIs or properties below.
 
-`aeolkorea.com` is a **different company** — AEOL Electronics Korea, a heatpipe, vapor-chamber and
-thermal-module supplier — and nothing on that domain belongs to this profile. `aeol.kr` does not
-resolve.
+### Published properties
 
-## What is in this repository
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- `apis.yml` — company identity, links, and the `x-coverage` record of why this profile is thin
-- `well-known/aeol-well-known.yml` — the `/.well-known/` probe: zero hits, catch-all origin, negative control failed
-- `security/aeol-domain-security.yml` — TLS/DNS posture (TLS 1.2, no HSTS, no DNSSEC, no CAA, no DMARC)
-- `packages/aeol-packages.yml` — registry sweep: no first-party package on npm, PyPI, RubyGems, crates.io, Packagist or NuGet, and no GitHub organization
-- `conformance/aeol-conformance.yml` — API standards recorded as not-applicable; the CES/Red Dot awards and the KRICT MOF licence recorded as the real third-party assessments
-- `llms/aeol-llms.txt` — an agent-facing summary of the above
+#### Security (1)
 
-## Links
+Authentication, trust centre, and vulnerability disclosure.
 
-- Website: https://www.aeolkorea.co.kr/
-- Crunchbase: https://www.crunchbase.com/organization/aeol
-- Secondary market: https://equityzen.com/company/aeol/
+- [Aeol Domain Security](https://apis.io/security/aeol/aeol-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aeolkorea.co.kr/)
+
+## API Evangelist rating
+
+**Kin Score 4.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.8 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aeol/](https://apis.io/providers/aeol/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AEOL: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aeol/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
